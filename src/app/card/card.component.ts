@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Card} from '../app.component';
 
 @Component({
     selector: 'app-card',
     templateUrl: './card.component.html',
-    styleUrls: ['./card.component.scss'],
-    interpolation: ['{{', '}}']
+    styleUrls: ['./card.component.scss']
 })
 
 export class CardComponent implements OnInit {
+
+    @Input() card! : Card
+
     title: string = 'My Card Title'
     text: string = 'My sample text'
 
@@ -16,7 +19,7 @@ export class CardComponent implements OnInit {
     ngOnInit() {}
 
     changeTitle() {
-        this.title = 'My second title'
+        this.card.title = 'My second title'
     }
 
     inputHandler(value: any) {
@@ -25,6 +28,6 @@ export class CardComponent implements OnInit {
     }
 
     changeHandler() {
-        console.log(this.title)
+        console.log(this.card.title)
     }
 }
