@@ -2,7 +2,7 @@
     <h2 [ngStyle]="{
         color: title.length < 8 ? 'blue' : 'red',
         fontWeight: title.length < 8 ? 'normal' : 'bold'
-    }">{{ card.title }}</h2>
+    }">{{index}} {{ card.title }}</h2>
 
 
     <!-- <p class="text" [ngClass]="{
@@ -26,6 +26,9 @@
     <div class="buttons">
         <button (click)="changeTitle()">Change title</button>
         <button (click)="card.title = 'inline title'">Change title inline</button>
+    </div>
+    <div>
+        <strong>{{cardDate | date: "dd MMMM yyyy HH:mm:ss":'ru'}}</strong>
     </div>
     <!-- <div>
         <input type="text" #myInput (input)="inputHandler(myInput.value)" [value]="title">
