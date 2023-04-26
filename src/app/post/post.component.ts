@@ -1,24 +1,10 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-post',
-    template: `
-        <div class="post">
-            <button (click)="onClick()" >Click</button>
-        </div>
-    `,
-    styles: [`
-        .post {
-            text-align: center;
-        }
-        button {
-            background-color: aqua;
-        }
-    `]
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css']
 })
-
 export class PostComponent {
-    onClick() {
-        
-    }
+
 }

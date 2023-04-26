@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  now:Date = new Date()
+  // now:Date = new Date()
 
   // toggle: any = false
 
